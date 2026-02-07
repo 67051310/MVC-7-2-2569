@@ -129,7 +129,7 @@ function displayShelters() {
 
 
 
-// ===== ฟังก์ชันกรองตามปุ่ม =====
+// ฟังก์ชันกรองตามปุ่ม 
 function filterCitizens(type){
 
     if(type === "ทั้งหมด"){
@@ -179,7 +179,7 @@ function processAllocation(data){
 
     const { citizens, shelters, assignments } = data;
 
-    // ===== RULE 1 แก้ศูนย์ที่ล้นก่อน =====
+    // RULE 1 
     shelters.forEach(shelter => {
 
         let staying = assignments.filter(a =>
@@ -215,7 +215,7 @@ function processAllocation(data){
 
     let waiting = citizens.filter(c=>!assignedIds.includes(c.id));
 
-    // ===== RULE 2 เด็ก/แก่ ก่อน =====
+    //  RULE 2 
     waiting.sort((a,b)=>{
         const pA = (a.age < 15 || a.age >= 60)?1:0;
         const pB = (b.age < 15 || b.age > 60)?1:0;
