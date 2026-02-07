@@ -156,10 +156,11 @@ function fixOverCapacity(data) {
                 const A = data.citizens.find(c => c.id === a.citizen_id);
                 const B = data.citizens.find(c => c.id === b.citizen_id);
 
-                const pA = (A.age < 15 || A.age > 60) ? 1 : 0;
+                const pA = (A.age < 15 || A.age >= 60) ? 1 : 0;
                 const pB = (B.age < 15 || B.age > 60) ? 1 : 0;
 
-                return pA - pB;
+               return pB - pA;
+
             });
 
             const overflow = staying.slice(shelter.capacity);
@@ -173,8 +174,6 @@ function fixOverCapacity(data) {
 
     return data;
 }
-
-
 
 function processAllocation(data){
 
@@ -194,10 +193,10 @@ function processAllocation(data){
                 const A = citizens.find(c=>c.id===a.citizen_id);
                 const B = citizens.find(c=>c.id===b.citizen_id);
 
-                const pA = (A.age < 15 || A.age > 60)?1:0;
+                const pA = (A.age < 15 || A.age >= 60 )?1:0;
                 const pB = (B.age < 15 || B.age > 60)?1:0;
 
-                return pA - pB; // คนไม่สำคัญออกก่อน
+                return pB-pA; // คนไม่สำคัญออกก่อน
             });
 
             const overflow = staying.slice(shelter.capacity);
@@ -209,7 +208,7 @@ function processAllocation(data){
         }
     });
 
-    // ===== RULE 4 ห้ามซ้ำ (เฉพาะที่พักอยู่) =====
+    //  RULE 4 
     const assignedIds = assignments
         .filter(a=>a.status==="พักอยู่")
         .map(a=>a.citizen_id);
@@ -218,12 +217,12 @@ function processAllocation(data){
 
     // ===== RULE 2 เด็ก/แก่ ก่อน =====
     waiting.sort((a,b)=>{
-        const pA = (a.age<15 || a.age>60)?1:0;
-        const pB = (b.age<15 || b.age>60)?1:0;
+        const pA = (a.age < 15 || a.age >= 60)?1:0;
+        const pB = (b.age < 15 || b.age > 60)?1:0;
         return pB - pA;
     });
 
-    // ===== RULE 3 สุขภาพต้องไป Low risk =====
+    // RULE 3 
     waiting.forEach(citizen=>{
 
         let possible = shelters;
@@ -253,6 +252,7 @@ function processAllocation(data){
 
     return data;
 }
+
 
 document.addEventListener("DOMContentLoaded", () => {
 

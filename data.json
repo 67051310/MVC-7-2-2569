@@ -1,9 +1,9 @@
 {
   "shelters": [
-    { "id": "S1", "name": "วัดกลาง", "capacity": 5, "risk_level": "low" },
-    { "id": "S2", "name": "โรงเรียนเอ", "capacity": 10, "risk_level": "medium" },
-    { "id": "S3", "name": "หอประชุมบี", "capacity": 3, "risk_level": "low" },
-    { "id": "S4", "name": "สนามกีฬา", "capacity": 8, "risk_level": "high" },
+    { "id": "S1", "name": "วัดกลาง", "capacity":7, "risk_level": "low" },
+    { "id": "S2", "name": "โรงเรียนเอ", "capacity": 5, "risk_level": "medium" },
+    { "id": "S3", "name": "หอประชุมบี", "capacity":10,"risk_level": "low" },
+    { "id": "S4", "name": "สนามกีฬา", "capacity": 4, "risk_level": "high" },
     { "id": "S5", "name": "ศูนย์พักพิงซี", "capacity": 2, "risk_level": "low" }
   ],
   "citizens": [
