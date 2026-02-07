@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>ลงทะเบียน</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<script src="nav.js"></script>
+<body>
+    <div class="container">
+        <h1>ประชาชนที่ลงทะเบียน</h1>
+        <div class="filter-group">
+            <button onclick="filterCitizens('ทั้งหมด')">ทั้งหมด</button>
+            <button onclick="filterCitizens('ทั่วไป')">ทั่วไป</button>
+            <button onclick="filterCitizens('กลุ่มเสี่ยง')">กลุ่มเสี่ยง</button>
+            <button onclick="filterCitizens('VIP')">VIP</button>
+        </div>
+        
+        <ul id="citizen-list" class="list">
+            </ul>
+
+        <div class="nav-menu">
+            <a href="shelterManage.html">ไปหน้าจัดสรรที่พัก</a> | 
+            <a href="report.html">ไปหน้ารายงานผล</a>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        window.onload = () => displayCitizens(); 
+    </script>
+</body>
+</html>

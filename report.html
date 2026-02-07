@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>รายงานผล</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>รายงานการจัดสรร</h1>
+        
+        <div class="search-box">
+            <input type="text" id="search-input" placeholder="ค้นหาชื่อประชาชน..." onkeypress="handleEnter(event)">
+        </div>
+
+        <div id="report-results">
+            </div>
+
+        <div class="nav-menu">
+            <a href="citizen.html">กลับหน้าลงทะเบียน</a> | 
+            <a href="shelterManage.html">กลับหน้าจัดสรรที่พัก</a>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <script>
+        window.onload = () => displayReport();
+    </script>
+</body>
+</html> 

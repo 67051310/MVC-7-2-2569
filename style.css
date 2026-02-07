@@ -1,0 +1,135 @@
+body {
+    font-family: sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+    color: #333;
+}
+
+.container {
+    background-color: #fff;
+    width: 900px;              /* 🔥 กรอบใหญ่ขึ้น */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    border: 3px solid transparent;
+}
+
+/* หัวข้อ */
+h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+}
+
+/* ปุ่ม filter */
+.filter-group {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.filter-group button {
+    width: auto;
+    padding: 10px 18px;
+    margin: 5px;
+}
+
+/* รายการประชาชน */
+.list {
+    list-style: none;
+    padding: 0;
+}
+
+/* 🔥 ทำให้ข้อมูลอยู่บรรทัดเดียว */
+.list li {
+    border-bottom: 1px solid #eee;
+    padding: 12px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+    white-space: nowrap;       /* ไม่ให้ตัดบรรทัด */
+}
+
+/* ช่องค้นหา */
+.search-box input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+/* ปุ่มทั่วไป */
+button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+/* กล่องแสดงผลรายงาน */
+.card {
+    border: 1px solid #eee;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    background: #fafafa;
+}
+
+/* เมนูลิงก์ */
+.nav-menu {
+    margin-top: 25px;
+    text-align: center;
+}
+
+/*shelter*/
+.shelter-card{
+    border:1px solid #ddd;
+    border-radius:10px;
+    padding:14px;
+    margin-bottom:12px;
+    background:#fafafa;
+}
+
+.row{
+    margin:4px 0;
+}
+
+.title{
+    font-size:18px;
+    font-weight:bold;
+}
+
+.available{
+    color:green;
+    font-weight:bold;
+}
+
+.full{
+    color:red;
+    font-weight:bold;
+}
+
+.risk.low{ color:green; font-weight:bold;}
+.risk.medium{ color:orange; font-weight:bold;}
+.risk.high{ color:red; font-weight:bold;}
+
+
+
+/* Animation เดิม */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    75% { transform: translateX(5px); }
+}
+
+.shaking {
+    animation: shake 0.4s ease-in-out;
+}
